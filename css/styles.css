@@ -1,0 +1,116 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #dee2e6;
+    background-color: #000;
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.info-message {
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 1rem;
+    color: #75b798;
+    font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    font-size: 0.875rem;
+    line-height: 1.5;
+}
+
+.info-message::before {
+    content: "💡";
+    margin-right: 0.5rem;
+    animation: blink 1.5s infinite;
+}
+
+@keyframes blink {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+}
+
+.hero {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2rem;
+    text-align: center;
+}
+
+.hero-image {
+    width: 200px;
+    height: 200px;
+    background-image: url('/assets/images/avatar.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+}
+
+@media (min-width: 768px) {
+    .hero-image {
+        width: 250px;
+        height: 250px;
+    }
+}
+
+.hero-title {
+    font-weight: 300;
+    line-height: 0.5;
+    font-size: calc(1.525rem + 3.3vw);
+}
+
+@media (min-width: 1200px) {
+    .hero-title {
+        font-size: 3rem;
+    }
+}
+
+.hero-subtitle {
+    color: #adb5bd;
+    margin-top: 0;
+}
+
+
+.hero-socials {
+    display: flex;
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    justify-content: center;
+    gap: 1.5rem;
+    align-items: center; 
+}
+
+.hero-socials a {
+    color: #adb5bd;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.hero-socials a:hover {
+    color: #fff;
+}
+
+.social-icon {
+    width: 1rem;
+    height: 1rem;
+}
