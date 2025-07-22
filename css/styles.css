@@ -28,7 +28,7 @@ body {
 }
 
 .info-message::before {
-    content: ">_";
+    content: "🧑‍💻";
     margin-right: 0.5rem;
 }
 
