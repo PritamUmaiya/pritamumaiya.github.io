@@ -28,18 +28,8 @@ body {
 }
 
 .info-message::before {
-    content: "💡";
+    content: ">_";
     margin-right: 0.5rem;
-    animation: blink 1.5s infinite;
-}
-
-@keyframes blink {
-    0%, 100% {
-        opacity: 1;
-    }
-    50% {
-        opacity: 0.5;
-    }
 }
 
 .hero {
